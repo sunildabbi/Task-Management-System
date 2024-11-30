@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Management System</h1>
+        </header>
+
+        <!-- Navigation Buttons -->
+        <div id="task-navigation">
+            <!-- This button will trigger the display of the Create Task Form -->
+            <button onclick="showCreateForm()">Create Task</button>
+            <button onclick="fetchTasks()">View All Tasks</button>
+        </div>
+
+        <!-- Task Filter Section -->
+        <div id="task-filter">
+            <h3>Filter Tasks by Status</h3>
+            <select id="status-filter">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button onclick="filterTasksByStatus()">Show Tasks</button>
+        </div>
+
+        <!-- Task Form for Creating or Editing a Task -->
+        <div id="task-form" class="form-container" style="display:none;">
+            <!-- The form title will dynamically change depending on whether it's create or edit mode -->
+            <h3 id="form-title">Create a New Task</h3>
+            
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <div class="error-message" id="title-error" style="display:none;">This field is required</div>
+
+            <textarea id="task-description" placeholder="Task Description" required></textarea>
+            <div class="error-message" id="description-error" style="display:none;">This field is required</div>
+
+            <input type="date" id="task-due-date" required>
+            <div class="error-message" id="due-date-error" style="display:none;">This field is required</div>
+
+            <select id="task-status" required>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <div class="error-message" id="status-error" style="display:none;">This field is required</div>
+
+            <!-- The submit button text will dynamically change to "Create" or "Update" -->
+            <button id="submit-button" onclick="submitTask()">Create</button>
+            <button id="cancel-button" onclick="cancelCreateForm()">Cancel</button>
+        </div>
+
+        <!-- Task List -->
+        <div id="task-list" class="task-list" style="display:none;">
+            <h3>All Tasks</h3>
+            <!-- Task cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Flash Message for task creation/update -->
+        <div id="task-created-message" style="display:none; color: green; font-weight: bold; padding: 10px; background-color: #dff0d8; border-radius: 5px; margin-top: 20px;">
+            Task created successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
