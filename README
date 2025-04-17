@@ -24,3 +24,12 @@ A simple, full-stack task management application that allows users to create, re
    ```bash
    git clone https://github.com/your-username/Task-Management-App.git
    cd Task-Management-App
+
+pip install -r requirements.txt
+
+python app.py
+
+http://127.0.0.1:5000/
+
+## 📬 Contact  
+Feel free to reach out at [sunildabbi03@gmail.com](mailto:sunildabbi03@gmail.com)
