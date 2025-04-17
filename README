@@ -1,1 +1,36 @@
-Single-database configuration for Flask.
+# 🗂️ Task Management App
+
+A simple, full-stack task management application that allows users to create, read, update, and delete tasks. Built with a Python backend (Flask or FastAPI) and a responsive HTML/CSS/JavaScript frontend.
+
+## 🚀 Features
+- Create new tasks with descriptions
+- View all existing tasks
+- Edit or delete tasks
+- Toggle task status (e.g., completed/pending)
+- Fully responsive design
+- RESTful API integration
+
+## 🛠️ Technologies Used
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Flask / FastAPI (local server)
+- **Database**: JSON / In-memory or any preferred DB
+- **Version Control**: Git, GitHub
+
+## 📁 Project Structure
+
+
+## 🔧 How to Run
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Task-Management-App.git
+   cd Task-Management-App
+
+pip install -r requirements.txt
+
+python app.py
+
+http://127.0.0.1:5000/
+
+## 📬 Contact  
+Feel free to reach out at [sunildabbi03@gmail.com](mailto:sunildabbi03@gmail.com)
+
